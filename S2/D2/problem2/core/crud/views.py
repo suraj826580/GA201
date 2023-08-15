@@ -69,3 +69,5 @@ def updateUser(request, user_id):
             json.dump(user, File, indent=4)
             return redirect("/read")
     return render(request, "update.html", {"user": contextUser})
+
+# End Routes
