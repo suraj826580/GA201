@@ -1,0 +1,20 @@
+[
+    {
+        "id": 3,
+        "name": "Sanam Bewafa",
+        "age": "18",
+        "city": "Thailand"
+    },
+    {
+        "id": 2,
+        "name": "Baadua",
+        "age": "10",
+        "city": "Aligarh"
+    },
+    {
+        "id": 3,
+        "name": "Nadu",
+        "age": "25",
+        "city": "Bengal"
+    }
+]

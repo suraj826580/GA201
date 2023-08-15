@@ -1,0 +1,44 @@
+{% extends "base.html" %} {%block start%}
+
+<div>
+  <center>
+    <h1 class="py-3">Users List</h1>
+    <hr />
+  </center>
+</div>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">S.No</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">City</th>
+        <th scope="col">Delete User</th>
+        <th scope="col">Update User</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in data%}
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{item.name}}</td>
+        <td>{{item.age}}</td>
+        <td>{{item.city}}</td>
+        <td>
+          <a href="{% url 'deleteUser' item.id%}">
+            <button type="button" class="btn btn-danger">Delete</button>
+          </a>
+        </td>
+        <td>
+          <a href="{% url 'updateUser' item.id%}">
+            <button type="button" class="btn btn-primary">Update User</button>
+          </a>
+        </td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+</div>
+
+{%endblock%}
